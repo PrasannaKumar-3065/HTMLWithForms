@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="crud.css" />
+    <script src="crud.js"></script>
+  </head>
+  <body>
+    <header>Crud Operations</header>
+    <div class="container">
+
+      <div class="inner-container-1">
+        <form>
+          <label>Name</label><span class="error" id="name-error"></span>
+          <input class="form-input" type="text" id="name" onkeyup="validate(this)" name="name">
+
+          <label>Phone Number</label><span class="error" id="phno-error"></span>
+          <input class="form-input" type="number" onkeyup="validate(this)" id="phno" />
+
+          <label>Date</label><span class="error" id="date-error"></span>
+          <input class="form-input" data-date="" data-date-format="DD MMMM YYYY" type="date" onchange="validate(this)" id="date" />
+
+          <label for="email">Email</label><span class="error" id="email-error"></span>
+          <input class="form-input" type="email" onkeyup="validate(this)" id="email" name="email">
+
+          <label>Address</label><span class="error" id="name-error"></span>
+          <textarea class="form-input" id="add" onkeyup="validate(this)" name="add" rows="6"></textarea>
+
+          <label>Location</label><span class="error" id="name-error"></span>
+          <input class="form-input" type="text" onkeyup="validate(this)" id="location"/>
+
+          <input class="submit" type="reset" onclick="reset()" id="reset" />
+          <input class="submit" type="submit" onclick="check(this)" id="submit"/>
+        </form>
+      </div> 
+      <div class="inner-container-2">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Location</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+  </body>
+</html>
