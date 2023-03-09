@@ -97,9 +97,9 @@ let check = () =>{
     let val = [];
     let errors = document.getElementsByClassName("error")
     let input = document.getElementsByClassName("form-input")
-    for(let i=0; i<errors.length; i++){
-        if(errors[i].innerText != ""){
-            val.push(errors[i])
+    for(let element of errors){
+        if(element.innerText != ""){
+            val.push(element)
         }
     }
     for(let element of input){
