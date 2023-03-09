@@ -72,9 +72,6 @@ const emailVal = (name,id) =>{
             msg = ". Required"
     }
     
-    else{
-        msg = ""
-    }
     document.getElementById(id+"-error").innerHTML= msg
 }
 
