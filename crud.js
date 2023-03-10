@@ -58,6 +58,7 @@ const emailVal = (name, id) => {
   let letters = 0;
   let msg = "";
   for (let i = 0; i < name.length; i++) {
+    document.getElementById(id).style.color = "black";
     if (name.charAt(i) == "@") {
       atCount++;
     } else if (name.charAt(i) == ".") {
@@ -83,9 +84,6 @@ const emailVal = (name, id) => {
     msg = "Caps not allowed";
   } else if (dotCount == 0) {
     msg = ". Required";
-  }
-  else{
-    document.getElementById(id).style.color = "black";
   }
   document.getElementById(id + "-error").innerHTML = msg;
 }
